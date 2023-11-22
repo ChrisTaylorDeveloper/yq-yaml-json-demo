@@ -37,3 +37,12 @@ children:
     age: 12
 EOF
 echo
+
+echo 'Ordered Mappings'
+yq -p yaml -o json << EOF
+ordered: !!omap
+  - Mark McGwire: 65
+  - Sammy Sosa: 63
+  - Ken Griffy: 58
+EOF
+echo
